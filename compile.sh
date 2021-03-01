@@ -18,3 +18,8 @@ gcc 3.3.c -o build/3.3.out
 
 gcc 4.1-2.c -o build/4.1.out
 gcc 4.1-2.c -o build/4.2.out -m32 # comment this if using WSL1, it cannot run 32bit binaries
+gcc 4.3-4.c -o build/4.3.out
+gcc 4.3-4.c -o build/4.4.out -m32 # comment this if using WSL1, it cannot run 32bit binaries
+
+gcc 5.1.c -o build/5.1.out
+gcc 5.2.c -o build/5.2.out
