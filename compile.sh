@@ -23,3 +23,14 @@ gcc 4.3-4.c -o build/4.4.out -m32 # comment this if using WSL1, it cannot run 32
 
 gcc 5.1.c -o build/5.1.out
 gcc 5.2.c -o build/5.2.out
+
+gcc 6.1.c -o build/6.1.out
+gcc 6.2.c -o build/6.2.out
+gcc 6.3.c -o build/6.3.out
+gcc 6.4.c -o build/6.4.out
+gcc 6.5.c -o build/6.5.out
+gcc 6.6.c -o build/6.6.out
+gcc 6.7.c -o build/6.7.out
+gcc 6.8.c -o build/6.8.out
+gcc 6.9.c -o build/6.9.out
+gcc 6.10.c -o build/6.10.out
