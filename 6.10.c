@@ -2,22 +2,10 @@
 
 int main(int argc, char const *argv[])
 {
-    char str[] = {'d', 'u', 'c', 'k', '\0'};
-
-    printf("While loop:  ");
-    char *curr = str;
-    while ((*curr) != '\0') {
-        printf("%c", *curr);
-        curr++;
-    }
-    printf("\n");
-
-    printf("Just printf: %s\n", str);
-    printf("\n");
-
-    char *cliche = "Hello, world!";
-
-    printf("%s\n", cliche);
+    char word[] = {'d', 'u', 'c', 'k'};
+    char *ptr = word; // The variable word IS a pointer to the first element of the array
+    word = ptr; // This would be like overwriting the array with a pointer
+    // gcc: "error: assignment to expression with array type"
 
     return 0;
 }

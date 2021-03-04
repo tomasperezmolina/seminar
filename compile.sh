@@ -33,4 +33,12 @@ gcc 6.6.c -o build/6.6.out
 gcc 6.7.c -o build/6.7.out
 gcc 6.8.c -o build/6.8.out
 gcc 6.9.c -o build/6.9.out
-gcc 6.10.c -o build/6.10.out
+# gcc 6.10.c -o build/6.10.out will not compile
+
+gcc 7.1.c -o build/7.1.out
+gcc 7.2.c -o build/7.2.out
+gcc 7.3.c -o build/7.3.out
+gcc 7.4.c -o build/7.4.out
+gcc 7.5.c -o build/7.5.out
+gcc 7.6.c -o build/7.6.out
+gcc 7.7.c -o build/7.7.out
