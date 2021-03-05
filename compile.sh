@@ -42,3 +42,11 @@ gcc 7.4.c -o build/7.4.out
 gcc 7.5.c -o build/7.5.out
 gcc 7.6.c -o build/7.6.out
 gcc 7.7.c -o build/7.7.out
+
+gcc 8.1.c -o build/8.1.out
+gcc 8.2.c -o build/8.2.out
+gcc 8.3.c -o build/8.3.out
+gcc 8.4.c -o build/8.4.out
+gcc 8.5.c -o build/8.5.out
+gcc 8.6.c -o build/8.6.out
+gcc 8.7.c -o build/8.7.out
