@@ -8,6 +8,7 @@ mkdir build
 gcc 1.1.c -o build/1.1.out
 gcc 1.2.c -o build/1.2.out
 gcc 1.3.c -o build/1.3.out
+gcc 1.4.c -w -o build/1.4.out
 
 gcc 2.1.c -o build/2.1.out
 gcc 2.2.c -o build/2.2.out
@@ -50,3 +51,7 @@ gcc 8.4.c -o build/8.4.out
 gcc 8.5.c -o build/8.5.out
 gcc 8.6.c -o build/8.6.out
 gcc 8.7.c -o build/8.7.out
+
+gcc 9.1.c -o build/9.1.out
+gcc 9.2.c -o build/9.2.out
+gcc 9.3.c -o build/9.3.out
