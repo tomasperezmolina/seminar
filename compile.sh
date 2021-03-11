@@ -5,6 +5,7 @@ fi
 
 mkdir build
 mkdir build/1.memory-manipulation
+mkdir build/2.memory-allocation
 
 gcc 1.memory-manipulation/1.1.c -o build/1.memory-manipulation/1.1.out
 gcc 1.memory-manipulation/1.2.c -o build/1.memory-manipulation/1.2.out
@@ -56,3 +57,11 @@ gcc 1.memory-manipulation/8.7.c -o build/1.memory-manipulation/8.7.out
 gcc 1.memory-manipulation/9.1.c -o build/1.memory-manipulation/9.1.out
 gcc 1.memory-manipulation/9.2.c -o build/1.memory-manipulation/9.2.out
 gcc 1.memory-manipulation/9.3.c -o build/1.memory-manipulation/9.3.out
+
+gcc 2.memory-allocation/1.1.c -o build/2.memory-allocation/1.1.out
+gcc 2.memory-allocation/1.2.c -o build/2.memory-allocation/1.2.out
+gcc 2.memory-allocation/1.3.c -o build/2.memory-allocation/1.3.out
+gcc 2.memory-allocation/1.4.c -o build/2.memory-allocation/1.4.out
+
+gcc 2.memory-allocation/2.1.c -o build/2.memory-allocation/2.1.out
+gcc 2.memory-allocation/2.1.c -no-pie -o build/2.memory-allocation/2.1.out
