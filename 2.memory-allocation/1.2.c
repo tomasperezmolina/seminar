@@ -1,11 +1,24 @@
-#define BYTES_IN_KB 1024
+#include <stdio.h>
 
-char buffer[200 * BYTES_IN_KB];
+#define REPETITIONS 10
 
-// $ du -b {filename}
-// $ size {filename}
+int get_i() {
+    int i = 0;
+    return i++;
+}
+
+int get_i_static() {
+    static int i = 0;
+    return i++;
+}
 
 int main(int argc, char const *argv[])
 {
-    
+    for(int i = 0; i < REPETITIONS; i++) {
+        printf("i:        %d\n", get_i());
+        printf("static i: %d\n", get_i_static());
+        printf("--------------------\n");
+    }
+
+    return 0;
 }

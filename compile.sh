@@ -60,8 +60,14 @@ gcc 1.memory-manipulation/9.3.c -o build/1.memory-manipulation/9.3.out
 
 gcc 2.memory-allocation/1.1.c -o build/2.memory-allocation/1.1.out
 gcc 2.memory-allocation/1.2.c -o build/2.memory-allocation/1.2.out
-gcc 2.memory-allocation/1.3.c -o build/2.memory-allocation/1.3.out
-gcc 2.memory-allocation/1.4.c -o build/2.memory-allocation/1.4.out
 
 gcc 2.memory-allocation/2.1.c -o build/2.memory-allocation/2.1.out
-gcc 2.memory-allocation/2.1.c -no-pie -o build/2.memory-allocation/2.1.out
+gcc 2.memory-allocation/2.2.c -o build/2.memory-allocation/2.2.out
+gcc 2.memory-allocation/2.3.c -o build/2.memory-allocation/2.3.out
+gcc 2.memory-allocation/2.4.c -o build/2.memory-allocation/2.4.out
+
+gcc 2.memory-allocation/3.1.c -o build/2.memory-allocation/3.1.out
+gcc 2.memory-allocation/3.2.c -o build/2.memory-allocation/3.2.out
+
+gcc 2.memory-allocation/4.1.c -no-pie -o build/2.memory-allocation/4.1.out
+gcc 2.memory-allocation/4.2.c -no-pie -o build/2.memory-allocation/4.2.out

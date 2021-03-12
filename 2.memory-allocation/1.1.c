@@ -1,9 +1,13 @@
-char buffer[2000];
+#include <stdio.h>
 
-// $ du -b {filename}
-// $ size {filename}
+int i;
+char c;
+char *ptr;
 
 int main(int argc, char const *argv[])
 {
-    
+    printf("i: %d\n", i);
+    printf("c: %c\n", c);
+    printf("ptr: %p\n", ptr);
+    return 0;
 }
