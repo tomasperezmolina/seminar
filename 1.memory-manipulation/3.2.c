@@ -4,7 +4,7 @@
  * Performs a / b and stores the result in o.
  * Returns 0 if divison was perform correctly, 1 if b == 0.
  */
-int safeDivision(int a, int b, int *o) {
+int safe_division(int a, int b, int *o) {
     if (b == 0) {
         return 1;
     }
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 
     int res;
 
-    if(safeDivision(i, y, &res) == 0) {
+    if(safe_division(i, y, &res) == 0) {
         printf("%d\n", res);
     } else {
         printf("y is zero!\n");
@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 
     int z = 0;
 
-    if(safeDivision(i, z, &res) == 0) {
+    if(safe_division(i, z, &res) == 0) {
         printf("%d\n", res);
     } else {
         printf("z is zero!\n");
