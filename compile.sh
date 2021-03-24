@@ -82,3 +82,20 @@ gcc 2.memory-allocation/6.5.c -o build/2.memory-allocation/6.5.out
 gcc 2.memory-allocation/7.1.c -o build/2.memory-allocation/7.1.out
 gcc 2.memory-allocation/8.1.c -w -g -o build/2.memory-allocation/8.1.out
 gcc 2.memory-allocation/9.1.c -o build/2.memory-allocation/9.1.out
+
+gcc 2.memory-allocation/11.1.c -o build/2.memory-allocation/11.1.out
+gcc 2.memory-allocation/11.2.c -o build/2.memory-allocation/11.2.out
+
+gcc 2.memory-allocation/12.1.c -o build/2.memory-allocation/12.1.out
+gcc 2.memory-allocation/13.1.c -o build/2.memory-allocation/13.1.out
+gcc 2.memory-allocation/13.2.c -o build/2.memory-allocation/13.2.out
+
+gcc 2.memory-allocation/14.1.c -o build/2.memory-allocation/14.1.out
+gcc 2.memory-allocation/14.2.c -o build/2.memory-allocation/14.2.out
+
+gcc 2.memory-allocation/15.1.c -o build/2.memory-allocation/15.1.out
+
+gcc 2.memory-allocation/16.1.c -w -o build/2.memory-allocation/16.1.out
+gcc 2.memory-allocation/16.2.c -o build/2.memory-allocation/16.2.out
+
+gcc 2.memory-allocation/17.1.c -g -o build/2.memory-allocation/17.1.out
