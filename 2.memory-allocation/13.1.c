@@ -1,16 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define ARRAY_SIZE 10
-
 int main(int argc, char const *argv[])
 {
-    int *array = calloc(ARRAY_SIZE, sizeof(int));
+    char *c_ptr = malloc(sizeof(char));
+    int *i_ptr = malloc(sizeof(int));
 
-    for (int i = 0; i < ARRAY_SIZE; i++) {
-        printf("%d, ", array[i]);
-    }
-    printf("\n");
+    printf("c_ptr: %p\n", c_ptr);
+    printf("i_ptr: %p\n", i_ptr);
+    printf("------------\n");
+
+    void *ptr = c_ptr;
+    printf("c_ptr: %p\n", ptr);
+    ptr = i_ptr;
+    printf("i_ptr: %p\n", ptr);
 
     return 0;
 }

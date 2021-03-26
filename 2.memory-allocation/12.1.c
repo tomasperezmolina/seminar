@@ -3,17 +3,20 @@
 
 int main(int argc, char const *argv[])
 {
-    char *c_ptr = malloc(sizeof(char));
-    int *i_ptr = malloc(sizeof(int));
+    char *c_ptr = (char *) malloc(sizeof(char));
+    int *i_ptr = (int *) malloc(sizeof(int));
 
     printf("c_ptr: %p\n", c_ptr);
     printf("i_ptr: %p\n", i_ptr);
-    printf("------------\n");
+    printf("---------------\n");
+    printf("c: %c\n", *c_ptr);
+    printf("i: %d\n", *i_ptr);
 
-    void *ptr = c_ptr;
-    printf("c_ptr: %p\n", ptr);
-    ptr = i_ptr;
-    printf("i_ptr: %p\n", ptr);
+    *c_ptr = 'c';
+    *i_ptr = 5;
+    printf("---------------\n");
+    printf("c: %c\n", *c_ptr);
+    printf("i: %d\n", *i_ptr);
 
     return 0;
 }

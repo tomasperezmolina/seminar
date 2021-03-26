@@ -1,51 +1,47 @@
-#include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-void do_something() {
-    int *numbers = malloc(10 * sizeof(int));
-    printf("Did something\n");
-    // Leak, the numbers pointer can never be freed
-}
-
-void do_something_if(int condition) {
-    int *numbers = malloc(10 * sizeof(int));
-    if (!condition) {
-        return; // Leak, we return early and won't be able to free numbers
+// Previously with automatic allocation (6.4.c)
+int *allocate_array_stack(int n) {
+    int array[n];
+    printf("In function:\n");
+    for (int i = 0; i < n; i++) {
+        printf("array[%d]: %d\n", i, array[i]);
     }
-
-    printf("Did something\n");
-    free(numbers);
+    return array;
 }
 
-void do_something_with_strings() {
-    const char *str = "A string!";  // statically allocated, should not be modified
-    char *modifiable = strdup(str);
-    modifiable[0] = 'B';
-    printf("%s\n", modifiable);
-    // Leak, strdup returns a malloc'd string
-}
-
-void do_something_loop() {
-    for(int i = 0; i < 10; i++) {
-        int *numbers = malloc(10 * sizeof(int));
-        // Leak, each time we will reenter the block the numbers variable will be overwritten.
+int *allocate_array_malloc(int n) {
+    int *array = malloc(sizeof(int) * n);
+    printf("In function:\n");
+    for (int i = 0; i < n; i++) {
+        printf("array[%d]: %d\n", i, array[i]);
     }
+    return array;
 }
+
 
 int main(int argc, char const *argv[])
 {
-    do_something();
-    do_something_if(0);
-    do_something_with_strings();
-    do_something_loop();
+    int array_size = 5;
+    printf("Dynamic allocation:\n");
+    int *array = allocate_array_malloc(array_size);
+    printf("-------------------------\n");
+    printf("In main:\n");
+    for (int i = 0; i < array_size; i++) {
+        printf("array[%d]: %d\n", i, array[i]);
+    }
+    free(array);
+
+    printf("--------------------------------------------\n");
+
+    printf("Automatic allocation:\n");
+    int *stack_array = allocate_array_stack(array_size);
+    printf("-------------------------\n");
+    printf("In main:\n");
+    for (int i = 0; i < array_size; i++) {
+        printf("array[%d]: %d\n", i, stack_array[i]);
+    }
+
     return 0;
 }
-
-/**
-valgrind --leak-check=full \
-    --show-leak-kinds=all \
-    --track-origins=yes \
-    ./build/2.memory-allocation/17.1.out
- */
-
