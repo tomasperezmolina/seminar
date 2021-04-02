@@ -6,6 +6,9 @@ fi
 mkdir build
 mkdir build/1.memory-manipulation
 mkdir build/2.memory-allocation
+mkdir build/3.input-output
+
+./file_setup.sh
 
 gcc 1.memory-manipulation/1.1.c -o build/1.memory-manipulation/1.1.out
 gcc 1.memory-manipulation/1.2.c -o build/1.memory-manipulation/1.2.out
@@ -108,4 +111,25 @@ gcc 2.memory-allocation/18.1.c -g -o build/2.memory-allocation/18.1.out
 
 gcc 2.memory-allocation/19.1.c -o build/2.memory-allocation/19.1.out
 
+gcc 3.input-output/1.1.c -o build/3.input-output/1.1.out
 
+gcc 3.input-output/2.1.c -o build/3.input-output/2.1.out
+
+gcc 3.input-output/3.1.c -o build/3.input-output/3.1.out
+gcc 3.input-output/3.2.c -o build/3.input-output/3.2.out
+
+gcc 3.input-output/4.1.c -o build/3.input-output/4.1.out
+
+gcc 3.input-output/5.1.c -o build/3.input-output/5.1.out
+
+gcc 3.input-output/6.1.c -o build/3.input-output/6.1.out
+gcc 3.input-output/6.2.c -o build/3.input-output/6.2.out
+gcc 3.input-output/6.3.c -o build/3.input-output/6.3.out
+
+gcc 3.input-output/7.1.c -o build/3.input-output/7.1.out
+gcc 3.input-output/7.2.c -o build/3.input-output/7.2.out
+
+gcc 3.input-output/8.1.c -o build/3.input-output/8.1.out
+gcc 3.input-output/8.2.c -o build/3.input-output/8.2.out
+
+gcc 3.input-output/9.1.c -o build/3.input-output/9.1.out
