@@ -1,0 +1,1 @@
+gcc 4.compilation/3.5.c -o build/4.compilation/3.5.out
