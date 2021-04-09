@@ -20,22 +20,18 @@ int main(int argc, char const *argv[])
     fill(buf_2, 'B', 10);
     char buf_3[200];
     fill(buf_3, 'C', 200);
-    size_t bytes_written = fwrite(buf_1, sizeof(char), 50, f);
-    if (ferror(f)) {
+    size_t chars_written = fwrite(buf_1, sizeof(char), 50, f);
+    if (!chars_written && ferror(f)) {
         perror("fwrite 1");
         exit(-1);
     }
-    if (ferror(f)) {
+    chars_written = fwrite(buf_2, sizeof(char), 10, f);
+    if (!chars_written && ferror(f)) {
         perror("fwrite 1");
         exit(-1);
     }
-    bytes_written = fwrite(buf_2, sizeof(char), 10, f);
-    if (ferror(f)) {
-        perror("fwrite 1");
-        exit(-1);
-    }
-    bytes_written = fwrite(buf_3, sizeof(char), 200, f);
-    if (ferror(f)) {
+    chars_written = fwrite(buf_3, sizeof(char), 200, f);
+    if (!chars_written && ferror(f)) {
         perror("fwrite 3");
         exit(-1);
     }
