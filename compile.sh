@@ -6,6 +6,10 @@ fi
 mkdir build
 mkdir build/1.memory-manipulation
 mkdir build/2.memory-allocation
+mkdir build/3.input-output
+mkdir build/4.compilation
+
+./file_setup.sh
 
 gcc 1.memory-manipulation/1.1.c -o build/1.memory-manipulation/1.1.out
 gcc 1.memory-manipulation/1.2.c -o build/1.memory-manipulation/1.2.out
@@ -108,4 +112,44 @@ gcc 2.memory-allocation/18.1.c -g -o build/2.memory-allocation/18.1.out
 
 gcc 2.memory-allocation/19.1.c -o build/2.memory-allocation/19.1.out
 
+gcc 3.input-output/1.1.c -o build/3.input-output/1.1.out
 
+gcc 3.input-output/2.1.c -o build/3.input-output/2.1.out
+
+gcc 3.input-output/3.1.c -o build/3.input-output/3.1.out
+gcc 3.input-output/3.2.c -o build/3.input-output/3.2.out
+
+gcc 3.input-output/4.1.c -o build/3.input-output/4.1.out
+
+gcc 3.input-output/5.1.c -o build/3.input-output/5.1.out
+
+gcc 3.input-output/6.1.c -o build/3.input-output/6.1.out
+gcc 3.input-output/6.2.c -o build/3.input-output/6.2.out
+gcc 3.input-output/6.3.c -o build/3.input-output/6.3.out
+
+gcc 3.input-output/7.1.c -o build/3.input-output/7.1.out
+gcc 3.input-output/7.2.c -o build/3.input-output/7.2.out
+
+gcc 3.input-output/8.1.c -o build/3.input-output/8.1.out
+gcc 3.input-output/8.2.c -o build/3.input-output/8.2.out
+
+gcc 3.input-output/9.1.c -o build/3.input-output/9.1.out
+
+gcc 3.input-output/10.1.c -o build/3.input-output/10.1.out
+gcc 3.input-output/10.2.c -o build/3.input-output/10.2.out
+gcc 3.input-output/10.3.c -o build/3.input-output/10.3.out
+gcc 3.input-output/10.4.c -o build/3.input-output/10.4.out
+
+gcc 3.input-output/11.1.c -o build/3.input-output/11.1.out
+
+gcc 4.compilation/1.1.c -E -o build/4.compilation/1.1.i
+gcc 4.compilation/1.2.a.c -E -o build/4.compilation/1.2.i
+gcc 4.compilation/1.3.c -DTEST=1 -E -o build/4.compilation/1.3.i
+gcc 4.compilation/1.4.c -E -o build/4.compilation/1.4.i
+
+gcc 4.compilation/2.1.c -S -masm=intel -o build/4.compilation/2.1.asm
+gcc 4.compilation/2.1.c -c -o build/4.compilation/2.1.o
+
+gcc 4.compilation/3.1.a.c 4.compilation/3.1.b.c -o build/4.compilation/3.1.out
+gcc 4.compilation/3.3.c 4.compilation/3.1.b.c -o build/4.compilation/3.3.out
+gcc 4.compilation/3.7.a.c -o build/4.compilation/3.7.out

@@ -1,0 +1,1 @@
+gcc 4.compilation/3.4.c -o build/4.compilation/3.4.out
